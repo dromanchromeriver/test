@@ -7,7 +7,7 @@ permissions:
   - object: /myapp/deployment/startApp.sh
     mode: 777
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: deployment/stopApp.sh
       timeout: 60
   ApplicationStart:
