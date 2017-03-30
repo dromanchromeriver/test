@@ -4,7 +4,7 @@
   "description": "testing express apps with mocha",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruudud/express-mocha-boilerplate"
+    "url": "https://github.com/dromanchromeriver/test"
   },
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "keywords": [
     "dokku"
   ],
-  "author": "Pål Ruud",
+  "author": "David Roman",
   "license": "MIT",
   "dependencies": {
     "express": "~3.4.0"
