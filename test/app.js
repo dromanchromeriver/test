@@ -1,15 +1,15 @@
-var request = require('supertest');
-var should = require('should');
-var app  = require(__dirname + '/../app');
-var port = 3333;
+const request = require('supertest');
+const should = require('should');
+const app  = require(__dirname + '/../app');
+const port = 3333;
 
-var baseUrl = 'http://localhost:' + port;
-var server;
+const baseUrl = 'http://localhost:' + port;
+let server;
 
-describe('app', function () {
+describe('app', () => {
 
-  before(function (done) {
-    server = app.listen(port, function (err, result) {
+  before( (done) => {
+    server = app.listen(port, (err, result) => {
       if (err) {
         done(err);
       } else {
@@ -18,13 +18,13 @@ describe('app', function () {
     });
   });
  
-  after(function (done) {
+  after((done) => {
     server.close();
     done();
   });
 
 
-  it('GET /', function (done) {
+  it('GET /', (done) => {
     request(baseUrl)
       .get('/')
       .set('Accept', 'application/json')
