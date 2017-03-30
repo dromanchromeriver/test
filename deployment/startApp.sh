@@ -2,6 +2,6 @@
 
 export NODE_PORT=1337
 
-sudo npm install
+sudo /usr/bin/npm install /myapp/
 
-sudo npm start & exit 0
+sudo /usr/bin/node /myapp/app.js 
