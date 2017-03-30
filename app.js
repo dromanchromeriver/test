@@ -13,6 +13,6 @@ app.get('/', function (req, res) {
 
 // Do not start app if testing
 if (!module.parent) {
-  app.listen(5000);
+  app.listen(1337);
 }
 
