@@ -4,12 +4,14 @@ files:
   - source: /
     destination: /myapp
 permissions:
-  - object: /myapp
+  - object: /myapp/deployment/
     mode: 777
 hooks:
   BeforeInstall:
     - location: deployment/stopApp.sh
       timeout: 15
+      runas: root
   ApplicationStart:
     - location: deployment/startApp.sh
       timeout: 15
+      runas: root
