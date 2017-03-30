@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /myapp
+permissions:
+  - object: /myapp/deployment/startApp.sh
+    mode: 777
+hooks:
+  AfterInstall:
+    - location: deployment/stopApp.sh
+      timeout: 60
+  ApplicationStart:
+    - location: deployment/startApp.sh
+      timeout: 10

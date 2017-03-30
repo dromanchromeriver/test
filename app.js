@@ -1,18 +1,33 @@
-var express = require('express');
+const express = require('express');
 
-var app = module.exports = express();
+const app = module.exports = express();
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   next();
 });
 
-app.get('/', function (req, res) {
-  res.set('Content-Type', 'application/json');
-  res.send('hello world');
+app.get('/', (req, res) => {
+  
+  return new Promise( (resolve, reject) => {
+  	
+  	if( res ) resolve(true);
+
+  }).then(( response ) =>{
+
+  		res.set('Content-Type', 'application/json');
+  		res.send('hello world');
+
+  }).catch( (err) => {
+  		throw 'Err serving path';
+  })
+
 });
 
-// Do not start app if testing
+
 if (!module.parent) {
-  app.listen(1337);
+  app.listen(1337, ()=> 
+  {
+	console.log('Listening http://localhost:1337/');
+  });
 }
 
