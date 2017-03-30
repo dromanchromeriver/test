@@ -1,5 +1,5 @@
 #!/bin/sh
 
 export NODE_PORT=1337
-node /myapp/index.js &
+npm start &
 exit 0
