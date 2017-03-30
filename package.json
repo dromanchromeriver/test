@@ -8,6 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "make test"
   },
   "keywords": [
