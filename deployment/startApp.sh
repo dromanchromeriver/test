@@ -2,6 +2,6 @@
 
 export NODE_PORT=1337
 
-npm install
+sudo npm install
 
-npm start & exit 0
+sudo npm start & exit 0

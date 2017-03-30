@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /myapp
 permissions:
-  - object: /myapp/deployment/startApp.sh
+  - object: /myapp
     mode: 777
 hooks:
   BeforeInstall:
