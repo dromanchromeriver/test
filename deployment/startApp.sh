@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd /myapp
+
 export NODE_PORT=1337
 
 sudo /usr/bin/npm install /myapp/
