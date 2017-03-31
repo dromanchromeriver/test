@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   }).then(( response ) =>{
 
   		res.set('Content-Type', 'application/json');
-  		res.send('hello world -- Hi' + new Date);
+  		res.send('hello world -- Friday' + new Date);
 
   }).catch( (err) => {
   		throw 'Err serving path';

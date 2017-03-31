@@ -10,4 +10,5 @@ npm install
 
 #/usr/bin/node /myapp/app.js > /dev/null 2> /dev/null < /dev/null &
 
+#redirecting stdout, stderr, and stdin to /dev/null
 node app.js > /dev/null 2> /dev/null < /dev/null &
